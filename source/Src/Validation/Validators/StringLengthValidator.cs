@@ -13,7 +13,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <remarks>
     /// <see langword="null"/> is logged as a failure.
     /// </remarks>
+#if NET471
     [ConfigurationElementType(typeof(StringLengthValidatorData))]
+#endif
     public class StringLengthValidator : ValueValidator<string>
     {
         private RangeChecker<int> rangeChecker;

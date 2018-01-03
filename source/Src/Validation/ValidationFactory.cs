@@ -18,8 +18,10 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
     {
         private readonly static AttributeValidatorFactory defaultAttributeValidatorFactory = new AttributeValidatorFactory();
         private readonly static ValidationAttributeValidatorFactory defaultValidationAttributeValidatorFactory = new ValidationAttributeValidatorFactory();
+#if NET471
         private readonly static IConfigurationSource EmptyValidationConfigurationSource = new DictionaryConfigurationSource();
         private static volatile ConfigurationValidatorFactory defaultConfigurationValidatorFactory = BuildDefaultConfigurationValidatorFactory();
+#endif
         private static volatile Lazy<ValidatorFactory> defaultCompositeValidatorFactory = BuildDefaultCompositeValidatorFactory();
 
         /// <summary>
@@ -29,7 +31,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             defaultAttributeValidatorFactory.ResetCache();
             defaultValidationAttributeValidatorFactory.ResetCache();
+#if NET471
             defaultConfigurationValidatorFactory.ResetCache();
+#endif
             if (defaultCompositeValidatorFactory.IsValueCreated)
             {
                 defaultCompositeValidatorFactory.Value.ResetCache();
@@ -60,6 +64,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return DefaultCompositeValidatorFactory.CreateValidator<T>(ruleset);
         }
 
+#if NET471
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <typeparamref name="T"/>
         /// through configuration and attributes on type <typeparamref name="T"/> and its ancestors for the default rule set,
@@ -89,6 +94,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             return CreateValidator<T>(ruleset, configurationSource, ValidationSpecificationSource.All);
         }
+#endif
 
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <paramref name="targetType"/>
@@ -114,6 +120,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return DefaultCompositeValidatorFactory.CreateValidator(targetType, ruleset);
         }
 
+#if NET471
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <paramref name="targetType"/>
         /// through configuration and attributes on type <paramref name="targetType"/> and its ancestors for the supplied rule set,
@@ -129,6 +136,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             return CreateValidator(targetType, ruleset, configurationSource, ValidationSpecificationSource.All);
         }
+#endif
 
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <typeparamref name="T"/>
@@ -156,6 +164,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return GetValidatorFactory(source).CreateValidator<T>(ruleset);
         }
 
+#if NET471
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <typeparamref name="T"/>
         /// through configuration and attributes on type <typeparamref name="T"/> and its ancestors for the default rule set,
@@ -187,6 +196,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             return GetValidatorFactory(configurationSource, source).CreateValidator<T>(ruleset);
         }
+#endif
 
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <paramref name="targetType"/>
@@ -214,6 +224,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return GetValidatorFactory(source).CreateValidator(targetType, ruleset);
         }
 
+#if NET471
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <paramref name="targetType"/>
         /// through configuration and attributes on type <paramref name="targetType"/> and its ancestors for the supplied rule set,
@@ -230,6 +241,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             return GetValidatorFactory(configurationSource, source).CreateValidator(targetType, ruleset);
         }
+#endif
 
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <typeparamref name="T"/>
@@ -268,6 +280,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return DefaultAttributeValidatorFactory.CreateValidator(targetType, ruleset);
         }
 
+#if NET471
         /// <summary>
         /// Returns a validator that represents the validation criteria specified for type <typeparamref name="T"/>
         /// through configuration for the default rule set.
@@ -389,6 +402,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             SetDefaultConfigurationValidatorFactory(BuildDefaultConfigurationValidatorFactory());
         }
+#endif
 
         /// <summary>
         /// Gets the <see cref="ValidatorFactory"/> to use by default.
@@ -398,6 +412,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             get { return defaultCompositeValidatorFactory.Value; }
         }
 
+#if NET471
         /// <summary>
         /// Gets the <see cref="ValidatorFactory"/> to use by default for configuration.
         /// </summary>
@@ -405,6 +420,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         {
             get { return defaultConfigurationValidatorFactory; }
         }
+#endif
 
         private static CompositeValidatorFactory CreateCompositeValidatorFactory(IEnumerable<ValidatorFactory> validatorFactories)
         {
@@ -423,10 +439,12 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             {
                 factories.Add(DefaultAttributeValidatorFactory);
             }
+#if NET471
             if (source.IsSet(ValidationSpecificationSource.Configuration))
             {
                 factories.Add(DefaultConfigurationValidatorFactory);
             }
+#endif
             if (source.IsSet(ValidationSpecificationSource.DataAnnotations))
             {
                 factories.Add(DefaultValidationAttributeValidatorFactory);
@@ -440,6 +458,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return CreateCompositeValidatorFactory(factories);
         }
 
+#if NET471
         private static ValidatorFactory GetValidatorFactory(IConfigurationSource configurationSource, ValidationSpecificationSource source)
         {
             List<ValidatorFactory> factories = new List<ValidatorFactory>();
@@ -463,6 +482,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
 
             return CreateCompositeValidatorFactory(factories);
         }
+#endif
 
         private static AttributeValidatorFactory DefaultAttributeValidatorFactory
         {
@@ -476,14 +496,22 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
 
         private static Lazy<ValidatorFactory> BuildDefaultCompositeValidatorFactory()
         {
+#if NET471
             return new Lazy<ValidatorFactory>(
                 () => new CompositeValidatorFactory(DefaultAttributeValidatorFactory, DefaultConfigurationValidatorFactory, DefaultValidationAttributeValidatorFactory),
                 System.Threading.LazyThreadSafetyMode.PublicationOnly);
+#else
+            return new Lazy<ValidatorFactory>(
+                () => new CompositeValidatorFactory(DefaultAttributeValidatorFactory, DefaultValidationAttributeValidatorFactory),
+                System.Threading.LazyThreadSafetyMode.PublicationOnly);
+#endif
         }
 
+#if NET471
         private static ConfigurationValidatorFactory BuildDefaultConfigurationValidatorFactory()
         {
             return new ConfigurationValidatorFactory(EmptyValidationConfigurationSource);
         }
+#endif
     }
 }

@@ -11,7 +11,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Validates a <see cref="DateTime"/> value by checking it belongs to a range relative to the current date.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(RelativeDateTimeValidatorData))]
+#endif
     public class RelativeDateTimeValidator : ValueValidator<DateTime>
     {
         private int lowerBound;

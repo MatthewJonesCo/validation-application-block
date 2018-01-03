@@ -11,7 +11,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// Performs validation on objects by applying the validation rules specified for a supplied type.
     /// </summary>
     /// <seealso cref="ValidationFactory"/>
+#if NET471
     [ConfigurationElementType(typeof(ObjectValidatorData))]
+#endif
     public class ObjectValidator : Validator
     {
         private readonly Type targetType;

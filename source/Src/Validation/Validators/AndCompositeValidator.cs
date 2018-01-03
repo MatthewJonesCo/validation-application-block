@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <remarks>
     /// Validation fails if any of the composed validators fails.
     /// </remarks>
+#if NET471
     [ConfigurationElementType(typeof(AndCompositeValidatorData))]
+#endif
     public class AndCompositeValidator : Validator
     {
         private IEnumerable<Validator> validators;

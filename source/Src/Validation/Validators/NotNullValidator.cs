@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Logs a failure when validating a <see langword="null"/> reference.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(NotNullValidatorData))]
+#endif
     public class NotNullValidator : ValueValidator
     {
         /// <summary>

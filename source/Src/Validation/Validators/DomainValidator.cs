@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Validates an object by checking if it belongs to a set.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(DomainValidatorData))]
+#endif
     public class DomainValidator<T> : ValueValidator<T>
     {
         private IEnumerable<T> domain;

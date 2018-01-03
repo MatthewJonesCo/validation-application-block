@@ -13,7 +13,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Performs validation on strings by matching them to a <see cref="Regex"/>.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(RegexValidatorData))]
+#endif
     public class RegexValidator : ValueValidator<string>
     {
         private string pattern;

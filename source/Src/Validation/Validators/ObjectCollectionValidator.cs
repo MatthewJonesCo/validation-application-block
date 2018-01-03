@@ -13,7 +13,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// to its members.
     /// </summary>
     /// <seealso cref="ValidationFactory"/>
+#if NET471
     [ConfigurationElementType(typeof(ObjectCollectionValidatorData))]
+#endif
     public class ObjectCollectionValidator : Validator
     {
         private readonly Type targetType;

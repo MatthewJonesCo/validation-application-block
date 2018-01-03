@@ -11,7 +11,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Performs validation on strings by verifying if it contains a character set using the <see cref="ContainsCharacters"/> mode.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(ContainsCharactersValidatorData))]
+#endif
     public class ContainsCharactersValidator : ValueValidator<string>
     {
         private string characterSet;

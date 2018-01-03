@@ -13,7 +13,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <remarks>
     /// <see langword="null"/> is logged as a failure.
     /// </remarks>
+#if NET471
     [ConfigurationElementType(typeof(RangeValidatorData))]
+#endif
     public class RangeValidator : RangeValidator<IComparable>
     {
         /// <summary>

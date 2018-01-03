@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Validates a string by checking it represents a value for a given type.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(TypeConversionValidatorData))]
+#endif
     public class TypeConversionValidator : ValueValidator<string>
     {
         private Type targetType;

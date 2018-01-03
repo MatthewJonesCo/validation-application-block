@@ -15,7 +15,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <remarks>
     /// Validation results are logged only if all composed validators log results.
     /// </remarks>
+#if NET471
     [ConfigurationElementType(typeof(OrCompositeValidatorData))]
+#endif
     public class OrCompositeValidator : Validator
     {
         private IEnumerable<Validator> validators;

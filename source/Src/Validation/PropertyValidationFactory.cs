@@ -112,11 +112,13 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
                 validators.Add(
                     GetPropertyValidatorFromAttributes(type, propertyInfo, ruleset, memberAccessValidatorBuilderFactory));
             }
+#if NET471
             if (validationSpecificationSource.IsSet(ValidationSpecificationSource.Configuration))
             {
                 validators.Add(
                     GetPropertyValidatorFromConfiguration(type, propertyInfo, ruleset, memberAccessValidatorBuilderFactory));
             }
+#endif
             if (validationSpecificationSource.IsSet(ValidationSpecificationSource.DataAnnotations))
             {
                 validators.Add(
@@ -170,6 +172,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return validator;
         }
 
+#if NET471
         /// <summary>
         /// 
         /// </summary>
@@ -213,6 +216,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
 
             return validator;
         }
+#endif
 
         /// <summary>
         /// 
@@ -248,10 +252,12 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             return validator;
         }
 
+#if NET471
         private static ValidatedPropertyReference GetValidatedPropertyReference(Type type,
             string ruleset,
             string propertyName,
-            IConfigurationSource configurationSource)
+            IConfigurationSource configurationSource
+            )
         {
             ValidationSettings validationSettings = configurationSource.GetSection(ValidationSettings.SectionName) as ValidationSettings;
             if (null != validationSettings)
@@ -271,6 +277,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
 
             return null;
         }
+#endif
 
         private struct PropertyValidatorCacheKey : IEquatable<PropertyValidatorCacheKey>
         {

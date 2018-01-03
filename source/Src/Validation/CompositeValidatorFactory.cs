@@ -24,6 +24,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             this.validatorFactories = validatorFactories;
         }
 
+#if NET471
         ///<summary>
         /// Initializes a composite validator factory from attribute and configuration validator factories
         ///</summary>
@@ -49,6 +50,19 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
             : this(new ValidatorFactory[] { attributeValidatorFactory, configurationValidatorFactory, validationAttributeValidatorFactory })
         {
         }
+#else
+        ///<summary>
+        /// Initializes a composite validator factory from attribute and configuration validator factories
+        ///</summary>
+        ///<param name="attributeValidatorFactory">The <see cref="AttributeValidatorFactory"/> to composite.</param>
+        ///<param name="validationAttributeValidatorFactory">The <see cref="ValidationAttributeValidatorFactory"/> to composite.</param>
+        public CompositeValidatorFactory(
+            AttributeValidatorFactory attributeValidatorFactory,
+            ValidationAttributeValidatorFactory validationAttributeValidatorFactory)
+            : this(new ValidatorFactory[] { attributeValidatorFactory, validationAttributeValidatorFactory })
+        {
+        }
+#endif
 
         /// <summary>
         /// Creates the validator for the specified target and ruleset.

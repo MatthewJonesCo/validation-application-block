@@ -168,7 +168,6 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
         /// custom attributes.</param>
         /// <returns>An <see cref="Attribute"/> array that contains the custom attributes of type type applied to 
         /// element, or an empty array if no such custom attributes exist.</returns>
-        /// <seealso cref="MetadataTypeAttribute"/>
         public static Attribute[] GetCustomAttributes(MemberInfo element, Type attributeType, bool inherit)
         {
             MemberInfo matchingElement = GetMatchingElement(element);
@@ -185,6 +184,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
                 sourceType = element.DeclaringType;
             }
 
+#if NET471
             MetadataTypeAttribute metadataTypeAttribute = (MetadataTypeAttribute)
                 Attribute.GetCustomAttribute(sourceType, typeof(MetadataTypeAttribute), false);
 
@@ -217,6 +217,7 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation
                 Type[] parameterTypes = methodBase.GetParameters().Select(pi => pi.ParameterType).ToArray();
                 return matchingMembers.Cast<MethodBase>().FirstOrDefault(mb => MatchMethodBase(mb, parameterTypes)) ?? element;
             }
+#endif
 
             return element;
         }

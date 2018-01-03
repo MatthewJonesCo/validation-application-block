@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <summary>
     /// Validates a string by checking it represents a value for a given enum type.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(EnumConversionValidatorData))]
+#endif
     public class EnumConversionValidator : ValueValidator<string>
     {
         private Type enumType;

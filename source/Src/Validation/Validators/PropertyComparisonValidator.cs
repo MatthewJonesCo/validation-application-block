@@ -10,7 +10,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// Performs validation by comparing the a value with the value of a property on the target
     /// object by using a specified comparison operation.
     /// </summary>
+#if NET471
     [ConfigurationElementType(typeof(PropertyComparisonValidatorData))]
+#endif
     public class PropertyComparisonValidator : ValueAccessComparisonValidator
     {
         /// <summary>

@@ -12,7 +12,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Validators
     /// <remarks>
     /// <see langword="null"/> is logged as a failure.
     /// </remarks>
+#if NET471
     [ConfigurationElementType(typeof(DateTimeRangeValidatorData))]
+#endif
     public class DateTimeRangeValidator : RangeValidator<DateTime>
     {
         /// <summary>
