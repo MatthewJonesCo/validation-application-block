@@ -4,20 +4,20 @@
     <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
     <FileVersion>6.0.1311.0</FileVersion>
     <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
-    <Title>Enterprise Library Validation Application Block - Non Configurable</Title>
+    <Title>Enterprise Library Validation Application Block - .NET Standard</Title>
     <Version>6.0.1311.0</Version>
-    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable</AssemblyName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageId>EnterpriseLibrary.Validation.NonConfigurable</PackageId>
+    <PackageId>EnterpriseLibrary.Validation.NETStandard</PackageId>
     <Authors>Microsoft; patterns-and-practices; Trimble; matthewjonesco</Authors>
     <Company>Microsoft; Trimble</Company>
     <Product>Microsoft Enterprise Library</Product>
-    <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.  Does not support configuration.</Description>
+    <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.  Provides support for cross-platform development with .NET Standard which lacks configuration.</Description>
     <Copyright></Copyright>
     <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
@@ -30,7 +30,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Release\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;TRIMBLE</DefineConstants>
@@ -39,7 +39,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Debug\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;DEBUG;TRIMBLE</DefineConstants>
@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net471|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Release\net471\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\net471\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;TRIMBLE</DefineConstants>
@@ -57,7 +57,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Debug\net471\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net471\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;DEBUG;TRIMBLE</DefineConstants>
