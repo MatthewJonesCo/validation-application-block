@@ -2,31 +2,35 @@
 
   <PropertyGroup>
     <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
-    <Company>Microsoft; Trimble</Company>
     <FileVersion>6.0.1311.0</FileVersion>
     <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
-    <Product>Microsoft Enterprise Library</Product>
-    <Title>Enterprise Library Validation Application Block</Title>
-    <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.</Description>
+    <Title>Enterprise Library Validation Application Block - Non Configurable</Title>
     <Version>6.0.1311.0</Version>
-    <Copyright></Copyright>
-    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation</AssemblyName>
+    <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>EnterpriseLibrary.Validation.NonConfigurable</PackageId>
     <Authors>Microsoft; patterns-and-practices; Trimble; matthewjonesco</Authors>
-    <PackageId>EnterpriseLibrary.Validation.NETStandard</PackageId>
+    <Company>Microsoft; Trimble</Company>
+    <Product>Microsoft Enterprise Library</Product>
+    <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.  Does not support configuration.</Description>
+    <Copyright></Copyright>
     <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
     <PackageIconUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</PackageIconUrl>
     <RepositoryUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageTags>entlib entlib6 Enterprise Library validation validator vab LOB futures OSS</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Release\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;TRIMBLE</DefineConstants>
@@ -35,7 +39,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Debug\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netstandard2.0\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;DEBUG;TRIMBLE</DefineConstants>
@@ -44,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net471|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Release\net471\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\net471\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;TRIMBLE</DefineConstants>
@@ -53,7 +57,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net471|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-    <DocumentationFile>bin\Debug\net471\Microsoft.Practices.EnterpriseLibrary.Validation.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\net471\Microsoft.Practices.EnterpriseLibrary.Validation.NonConfigurable.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE;DEBUG;TRIMBLE</DefineConstants>
@@ -101,6 +105,12 @@
 
   <ItemGroup>
     <Compile Include="..\..\GlobalAssemblyInfo.cs" Link="GlobalAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\NuGet\Readme.txt" Link="Readme.txt">
+      <Pack>true</Pack>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
