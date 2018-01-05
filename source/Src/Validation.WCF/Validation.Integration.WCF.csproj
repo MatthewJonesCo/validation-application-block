@@ -1,117 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{891598C1-97B6-4703-B8DF-37024649482F}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF</RootNamespace>
+    <TargetFramework>net471</TargetFramework>
+    <FileVersion>6.0.1311.0</FileVersion>
+    <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
+    <Title>Validation Application Block Integration with WCF (PRE-RELEASE)</Title>
+    <Version>6.0.0.0</Version>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF</AssemblyName>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
+    <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\..\..\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>NonConfigurable.EnterpriseLibrary.Validation.Integration.WCF</PackageId>
+    <Authors>Microsoft; patterns-and-practices; Trimble; matthewjonesco</Authors>
+    <Company>Microsoft; Trimble</Company>
+    <Product>Non-Configurable Enterprise Library</Product>
+    <Description>This component allows the Validation Application Block to integrate with WCF.</Description>
+    <Copyright>Copyright (c) 2017 Trimble, Inc.</Copyright>
+    <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
+    <PackageIconUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</PackageIconUrl>
+    <RepositoryUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>entlib entlib6 Enterprise Library validation validator vab WCF service LOB futures OSS Trimble non-configurable .NETStandard</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\..\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
-    <CodeAnalysisRuleSet>..\..\EnterpriseLibrary.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Release\net471\Validation.Integration.WCF.xml</DocumentationFile>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>..\..\..\bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <DebugSymbols>true</DebugSymbols>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>..\..\..\bin\Release\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
+    <DefineConstants>TRACE;TRIMBLE</DefineConstants>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <DocumentationFile>bin\Debug\net471\Validation.Integration.WCF.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE;DEBUG;TRIMBLE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.1311.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NonConfigurable.EnterpriseLibrary.Common.6.0.1311\lib\net471\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Runtime.Serialization">
-    </Reference>
-    <Reference Include="System.ServiceModel">
-    </Reference>
-    <Reference Include="System.Xml" />
+    <Compile Include="..\..\GlobalAssemblyInfo.cs" Link="GlobalAssemblyInfo.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ValidationBehavior.cs" />
-    <Compile Include="ValidationBehaviorAttribute.cs" />
-    <Compile Include="ValidationBindingElement.cs" />
-    <Compile Include="ValidationBindingElementExtension.cs" />
-    <Compile Include="ValidationConstants.cs" />
-    <Compile Include="ValidationDetail.cs" />
-    <Compile Include="ValidationElement.cs" />
-    <Compile Include="ValidationFault.cs" />
-    <Compile Include="ValidationParameterInspector.cs" />
+    <None Include="..\..\Validation.licenseheader" Link="Validation.licenseheader" />
   </ItemGroup>
+
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <SubType>Designer</SubType>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Validation\Validation.csproj" />
   </ItemGroup>
+
   <ItemGroup>
-    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+    <Reference Include="System.ServiceModel" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\Validation.licenseheader">
-      <Link>Validation.licenseheader</Link>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Validation\Validation.csproj">
-      <Project>{46757276-64e7-4671-90ef-843f09d0ce25}</Project>
-      <Name>Validation</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>

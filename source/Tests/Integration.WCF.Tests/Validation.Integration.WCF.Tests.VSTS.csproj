@@ -120,7 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Src\Validation.WCF\Validation.Integration.WCF.csproj">
-      <Project>{891598C1-97B6-4703-B8DF-37024649482F}</Project>
+      <Project>{aae4f789-7a70-450f-95bb-14c32def49f8}</Project>
       <Name>Validation.Integration.WCF</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Src\Validation\Validation.csproj">
