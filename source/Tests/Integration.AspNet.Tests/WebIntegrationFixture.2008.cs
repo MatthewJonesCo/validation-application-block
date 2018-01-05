@@ -16,8 +16,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationWithLocalType.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationWithLocalType.aspx")]
         [TestCategory("Integration")]
         public new void CanUseValidatorWithAttributesWithTypeLocalToWebApp()
         {
@@ -26,8 +26,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationUsingAttributesWithNonLocalType.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationUsingAttributesWithNonLocalType.aspx")]
         [TestCategory("Integration")]
         public new void CanUseValidatorWithAttributesWithTypeFromReferencedAssemblyToWebApp()
         {
@@ -36,8 +36,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationUsingConfigurationWithNonLocalType.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationUsingConfigurationWithNonLocalType.aspx")]
         [TestCategory("Integration")]
         public new void CanUseValidatorFromConfigurationWithTypeFromReferencedAssemblyToWebApp()
         {
@@ -46,8 +46,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationWithDefaultTypeConversion.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationWithDefaultTypeConversion.aspx")]
         [TestCategory("Integration")]
         public new void UsingValidatorWithDefaultTypeConversionWillValidateTheConvertedTargetControlValue()
         {
@@ -56,8 +56,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationWithDefaultTypeConversionForEnum.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationWithDefaultTypeConversionForEnum.aspx")]
         [TestCategory("Integration")]
         public new void UsingValidatorWithDefaultTypeConversionForEnumWillValidateTheConvertedTargetControlValue()
         {
@@ -66,8 +66,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationWithCustomTypeConversion.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationWithCustomTypeConversion.aspx")]
         [TestCategory("Integration")]
         public new void UsingValidatorWithCustomTypeConversionWillValidateTheCustomConvertedTargetControlValue()
         {
@@ -76,8 +76,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValidationWithFailingCustomTypeConversion.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValidationWithFailingCustomTypeConversion.aspx")]
         [TestCategory("Integration")]
         public new void UsingValidatorWithFailingCustomTypeConversionWillLogValidationErrorWithSuppliedConversionErrorMessage()
         {
@@ -86,8 +86,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValueAccess.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValueAccess.aspx")]
         [TestCategory("Integration")]
         public new void CanGetValueForPropertyMappedToProvidedValidator()
         {
@@ -96,8 +96,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValueAccess.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValueAccess.aspx")]
         [TestCategory("Integration")]
         public new void CanGetValueForPropertyMappedToOtherValidator()
         {
@@ -106,8 +106,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValueAccess.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValueAccess.aspx")]
         [TestCategory("Integration")]
         public new void CanGetValueForPropertyMappedToValidatorInSameNamingContainerAsProvidedValidator()
         {
@@ -116,8 +116,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValueAccess.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValueAccess.aspx")]
         [TestCategory("Integration")]
         public new void ValueRequestForNonMappedPropertyReturnsFailure()
         {
@@ -126,8 +126,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/ValueAccessValueConvert.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/ValueAccessValueConvert.aspx")]
         [TestCategory("Integration")]
         public new void CanGetConvertedValueForPropertyMappedToProvidedValidator()
         {
@@ -136,8 +136,8 @@ namespace Microsoft.Practices.EnterpriseLibrary.Validation.Integration.AspNet.Te
 
         [TestMethod]
         [HostType("ASP.NET")]
-        [AspNetDevelopmentServerHost("%PathToWebRoot%\\Web", "/Web")]
-        [UrlToTest("http://localhost/Web/CrossFieldValidationWithLocalType.aspx")]
+        [AspNetDevelopmentServerHost(@"..\..\..\Integration.AspNet.Tests.Web\Web", "/Web")]
+        [UrlToTest("http://localhost/CrossFieldValidationWithLocalType.aspx")]
         [TestCategory("Integration")]
         public new void CanPerformCrossFieldValidation()
         {
