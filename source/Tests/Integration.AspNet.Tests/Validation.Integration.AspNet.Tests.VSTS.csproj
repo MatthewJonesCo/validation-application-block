@@ -86,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Src\Validation.AspNet\Validation.Integration.AspNet.csproj">
-      <Project>{5E66DD34-3ABB-48F7-AF8E-1F6D1C41FB9B}</Project>
+      <Project>{d9c20b7d-0e16-493a-b624-0276cd01676f}</Project>
       <Name>Validation.Integration.AspNet</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Src\Validation\Validation.csproj">
