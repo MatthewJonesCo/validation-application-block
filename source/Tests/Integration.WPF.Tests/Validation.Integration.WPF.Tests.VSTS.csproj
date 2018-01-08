@@ -107,7 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Src\Validation.Integration.WPF\Validation.Integration.WPF.csproj">
-      <Project>{f2b37e3c-5c7c-468a-8497-ad0a13a1005b}</Project>
+      <Project>{d4ac3639-442b-44b6-b522-ffb0aa83a54e}</Project>
       <Name>Validation.Integration.WPF</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Src\Validation\Validation.csproj">

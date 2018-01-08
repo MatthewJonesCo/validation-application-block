@@ -7,8 +7,10 @@ using System.Security;
 [assembly: ComVisible(false)]
 [assembly: Guid("F66D2C97-FA35-432b-B6F1-6419523289A4")]
 
+#if !TRIMBLE
 [assembly: AssemblyVersion("6.0.0.0")]
 [assembly: AssemblyFileVersion("6.0.1311.0")]
 [assembly: AssemblyInformationalVersion("6.0.1311-prerelease")]
+#endif
 
 [assembly: SecurityTransparent]
