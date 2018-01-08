@@ -22,7 +22,7 @@
     <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
     <PackageIconUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</PackageIconUrl>
-    <RepositoryUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</RepositoryUrl>
+    <RepositoryUrl>https://github.com/MatthewJonesCo/validation-application-block</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>entlib entlib6 Enterprise Library validation validator vab WCF service LOB futures OSS Trimble non-configurable .NETStandard</PackageTags>
   </PropertyGroup>

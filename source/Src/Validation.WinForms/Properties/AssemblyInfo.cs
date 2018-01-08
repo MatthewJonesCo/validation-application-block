@@ -4,11 +4,13 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security;
 
+#if !TRIMBLE
 [assembly: AssemblyTitle("Enterprise Library Validation Application Block WinForms Integration")]
 [assembly: AssemblyDescription("Enterprise Library Validation Application Block WinForms Integration")]
 [assembly: AssemblyVersion("6.0.0.0")]
 [assembly: AssemblyFileVersion("6.0.1311.0")]
 [assembly: AssemblyInformationalVersion("6.0.1311-prerelease")]
+#endif
 
 [assembly: SecurityTransparent]
 

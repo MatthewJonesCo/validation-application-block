@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Src\Validation.WinForms\Validation.Integration.WinForms.csproj">
-      <Project>{30E03786-66F1-4F4E-A5C9-3162851D21BD}</Project>
+      <Project>{27f1959f-c12c-450f-a3a9-9fbac5e74cf9}</Project>
       <Name>Validation.Integration.WinForms</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Src\Validation\Validation.csproj">
