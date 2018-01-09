@@ -2,29 +2,11 @@
 
   <PropertyGroup>
     <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
-    <FileVersion>6.0.1311.0</FileVersion>
-    <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
     <Title>Non-Configurable Enterprise Library Validation Application Block</Title>
-    <Version>6.0.1311.0</Version>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation</RootNamespace>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>NonConfigurable.EnterpriseLibrary.Validation</PackageId>
-    <Authors>Microsoft; patterns-and-practices; Trimble; matthewjonesco</Authors>
-    <Company>Microsoft; Trimble</Company>
-    <Product>Non-Configurable Enterprise Library</Product>
     <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.  This is a non-configurable .NET Standard-based Validation Application Block.</Description>
-    <Copyright>Copyright (c) 2017 Trimble, Inc.</Copyright>
-    <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
-    <PackageIconUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/MatthewJonesCo/validation-application-block</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>entlib entlib6 Enterprise Library validation validator vab LOB futures OSS Trimble non-configurable .NETStandard</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
@@ -104,17 +86,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs" Link="GlobalAssemblyInfo.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="..\..\NuGet\Readme.txt" Link="Readme.txt">
-      <Pack>true</Pack>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NonConfigurable.EnterpriseLibrary.Common" Version="6.0.1311" />
+    <PackageReference Include="NonConfigurable.EnterpriseLibrary.Common" Version="6.0.1312" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
   </ItemGroup>
 

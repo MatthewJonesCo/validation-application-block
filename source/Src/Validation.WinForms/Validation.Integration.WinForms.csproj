@@ -2,29 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
-    <FileVersion>6.0.1311.0</FileVersion>
-    <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
     <Title>Validation Application Block Integration with WinForms (PRE-RELEASE)</Title>
-    <Version>6.0.0.0</Version>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms</RootNamespace>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageId>NonConfigurable.EnterpriseLibrary.Validation.Integration.WinForms</PackageId>
-    <Authors>Microsoft; patterns-and-practices; Trimble; matthewjonesco</Authors>
-    <Company>Microsoft; Trimble</Company>
-    <Product>Non-Configurable Enterprise Library</Product>
     <Description>This component allows the Validation Application Block to integrate with WinForms.</Description>
-    <Copyright>Copyright (c) 2017 Trimble, Inc.</Copyright>
-    <PackageLicenseUrl>http://opensource.org/licenses/Apache-2.0</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/MatthewJonesCo/validation-application-block</PackageProjectUrl>
-    <PackageIconUrl>http://nuget.org/Media/Default/Packages/Unity/2.0/entlib_new_icon_100x100.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/MatthewJonesCo/validation-application-block</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>entlib entlib6 Enterprise Library validation validator vab WCF service LOB futures OSS Trimble non-configurable .NETStandard</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
