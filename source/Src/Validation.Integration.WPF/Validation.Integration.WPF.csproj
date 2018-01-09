@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
-    <Title>Validation Application Block Integration with WPF (PRE-RELEASE)</Title>
+    <Title>Validation Application Block Integration with WPF</Title>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF</RootNamespace>
     <PackageId>NonConfigurable.EnterpriseLibrary.Validation.Integration.WPF</PackageId>

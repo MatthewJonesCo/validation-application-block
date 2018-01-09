@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
-    <Title>Validation Application Block Integration with WCF (PRE-RELEASE)</Title>
+    <Title>Validation Application Block Integration with WCF</Title>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF</RootNamespace>
     <PackageId>NonConfigurable.EnterpriseLibrary.Validation.Integration.WCF</PackageId>

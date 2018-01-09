@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net471</TargetFramework>
-    <Title>Validation Application Block Integration with WinForms (PRE-RELEASE)</Title>
+    <Title>Validation Application Block Integration with WinForms</Title>
     <AssemblyName>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms</AssemblyName>
     <RootNamespace>Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WinForms</RootNamespace>
     <PackageId>NonConfigurable.EnterpriseLibrary.Validation.Integration.WinForms</PackageId>
